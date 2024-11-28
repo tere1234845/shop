@@ -1,0 +1,212 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #0275d8;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #d3d3d3;
+}
+
+header nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0275d8;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+header nav ul li:hover ul {
+    display: block;
+}
+
+header nav ul li ul li {
+    margin: 5px 0;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Sección de carruseles */
+.carousel-container {
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.carousel-container h2 {
+    text-align: center;
+    color: #0275d8;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las imágenes en el carrusel */
+.carousel-images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Muestra 5 imágenes por fila */
+    gap: 15px;
+    padding: 10px 0;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.carousel-images img {
+    width: 150px; /* Tamaño reducido de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la imagen */
+}
+
+.carousel-images img:hover {
+    transform: scale(1.1); /* Efecto hover que hace que la imagen se amplíe */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}
+
+/* Contenedor de las características y precios debajo de las imágenes */
+.image-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image-info h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.image-info p {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 5px 0;
+}
+
+/* Estilo para productos */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bordes redondeados en los productos */
+    padding: 15px;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.3s; /* Transición para la ampliación y sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para el producto */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Efecto hover de ampliación */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}
+
+.product img {
+    max-width: 150px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la imagen */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product img:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover sobre la imagen */
+}
+
+.product button {
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.product button:hover {
+    background-color: #025aa5;
+}
+
+/* Carrito */
+.cart {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart label,
+.cart select,
+.cart input {
+    display: block;
+    margin: 10px 0;
+}
+
+.cart button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cart button:hover {
+    background-color: #4cae4c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    color: #777;
+    margin-top: 20px;
+}

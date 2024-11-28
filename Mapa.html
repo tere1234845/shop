@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Sitios</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Menú de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #333;
+            display: flex;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li:hover > a {
+            background: #444;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #444;
+            padding: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            width: 200px;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Mapa de sitios */
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sitemap-container h2 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        .sitemap-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sitemap-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .sitemap-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sitemap-item a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="mapa.html">Mapa de Sitios</a></li>
+            </ul>
+        </nav>
+        <h1>Mapa de Sitios</h1>
+    </header>
+
+    <!-- Contenido del Mapa de Sitios -->
+    <div class="sitemap-container">
+        <h2>Mapa de Navegación</h2>
+        
+        <div class="sitemap-list">
+            <!-- Categorías de Mapa de Sitios -->
+            <div class="sitemap-item">
+                <a href="index.html">Inicio</a>
+                <p>Página principal del sitio.</p>
+            </div>
+
+            <div class="sitemap-item">
+                <a href="catalogo.html">Catálogo</a>
+                <p>Visita nuestros productos.</p>
+            </div>
+
+            <div class="sitemap-item">
+                <a href="producto.html">Producto</a>
+                <p>Detalles sobre productos específicos.</p>
+            </div>
+
+            <div class="sitemap-item">
+                <a href="proveedor.html">Proveedor</a>
+                <p>Información de proveedores.</p>
+            </div>
+
+            <div class="sitemap-item">
+                <a href="ayuda.html">Ayuda</a>
+                <p>Encuentra respuestas a tus preguntas.</p>
+            </div>
+
+            <div class="sitemap-item">
+                <a href="contacto.html">Contacto</a>
+                <p>Formulario para preguntas o comentarios.</p>
+            </div>
+
+            <div class="sitemap-item">
+                <a href="mapa.html">Mapa de Sitios</a>
+                <p>Navega a través de todas las secciones de nuestro sitio.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo1.png.jpg" alt="Logo de la Tienda">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    Agregar Nuevo
+                    <ul>
+                        <li><a href="Producto.html">Producto</a></li>
+                        <li><a href="Proveedor.html">Proveedor</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Actualizar
+                    <ul>
+                        <li><a href="Producto.html">Producto</a></li>
+                        <li><a href="Proveedor.html">Proveedor</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Catálogo
+                    <ul>
+                        <li><a href="Marca.html">Marca</a></li>
+                        <li><a href="Modelo.html">Modelo</a></li>
+                        <li><a href="Precio.html">Precio</a></li>
+                        <li><a href="Area.html">Área</a></li>
+                    </ul>
+                </li>
+                <li><a href="Ayuda.html">Ayuda</a></li>
+                <li><a href="Mapa.html">Mapa de Sitios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <img src="banner.png.png" alt="Banner Promocional">
+        </div>
+
+        <section class="carousel">
+            <div class="carousel-container" id="carouselMen">
+              
+                <!-- Carrusel de Hombres -->
+        
+                <div class="carousel-container" id="carouselMen">
+                    <h2>Prendas para Hombres</h2>
+                    <div class="carousel-images">
+                        <div class="product">
+                            <img src="camisa.jpg" alt="Prenda hombre 1">
+                            <div class="product-info">
+                                <p>Camisa Casual, Color Negro,Marca:Tempaky </p>
+                                <p>Precio: $300.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Camisa Negra Deportiva', 300)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="camisa2.jpg" alt="Prenda hombre 2">
+                            <div class="product-info">
+                                <p>Camisa de Manga Corta,Color:Negro,Marca:Hawk Sports Mens</p>
+                                <p>Precio: $450.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Camisa de Manga Corta', 450)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="camisa3.jpg" alt="Prenda hombre 3">
+                            <div class="product-info">
+                                <p>Camisa de Algodón,Color:Negro,Marca:Under Armour</p>
+                                <p>Precio: $430.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+<button onclick="addToCart('Camisa de Algodón',430 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="camisa4.jpg" alt="Prenda hombre 4">
+                            <div class="product-info">
+                                <p>Camisa Formal, Color:Blanca,Marca:Joma Sports</p>
+                                <p>Precio: $420.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Camisa Formal Deportiva',420 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="chale1.jpg" alt="Prenda hombre 5">
+                            <div class="product-info">
+                                <p>Chaleco Elegante,Color:Negro,Marca:Chy Joey</p>
+                                <p>Precio: $520.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Chaleco Elegante',520 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-images">
+                        <div class="product">
+                            <img src="chale2.jpg" alt="Prenda hombre 6">
+                            <div class="product-info">
+                                <p>Chaleco Deportivo,Color:Negro, Marca:Alfini</p>
+                                <p>Precio: $460.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Chaleco Deportivo',460 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="short1.jpg" alt="Prenda hombre 7">
+                            <div class="product-info">
+                                <p>Short Deportivo,Color:Negro,Marca:Nike</p>
+                                <p>Precio: $1,200</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short Deportivo', 1,200)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="short2.jpg" alt="Prenda hombre 8">
+                            <div class="product-info">
+                                <p>Short Casual Deportivo,Color:Negro,Marca:Ultrahigh</p>
+                                <p>Precio: $1,560</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short Casual Deportivo',1,560 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="short3.jpg" alt="Prenda hombre 9">
+                            <div class="product-info">
+                                <p>Short Deportivo , Color:Gris, Marca:Nike</p>
+                                <p>Precio: $800.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short Deportivo, Gris', 800)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="short4.jpg" alt="Prenda hombre 10">
+                            <div class="product-info">
+                                <p>Short de Algodón Deportivo,Color:Gris,Marca:Manifity Sports</p>
+                                <p>Precio: $950.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short de Algodón', 950)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-images">
+                        <div class="product">
+                            <img src="short5.jpg" alt="Prenda hombre 11">
+                            <div class="product-info">
+                                <p>Short Deportivo,Color:Negro,Marca:Nike</p>
+                                <p>Precio: $560.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short Deportivo',560 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="suda1.jpg" alt="Prenda hombre 12">
+                            <div class="product-info">
+                                <p>Sudadera Con Capucha,Color:Negro,Marca:Manifity Sports </p>
+                                <p>Precio: $670.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Sudadera Con Capucha ',670 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="suda2.jpg" alt="Prenda hombre 13">
+                            <div class="product-info">
+                                <p>Sudadera Deportiva,Color:Negro, Marca:Manifity Sports</p>
+                                <p>Precio: $560.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Sudadera Deportiva', 560)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="conjunto1.jpg" alt="Prenda hombre 14">
+                            <div class="product-info">
+                                <p>Conjunto Deportivo,Color:Negro,Marca:Abigprofit</p>
+                                <p>Precio: $1,500</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Conjunto Deportivo', 1,500)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="conjunto2.jpg" alt="Prenda hombre 15">
+                            <div class="product-info">
+                                <p>Conjunto Casual Deportivo,Color:Negro, Marca:Abigprofit</p>
+                                <p>Precio: $1,890/p>
+                                    <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                    <button onclick="addToCart('Conjunto Casual Deportivo', 1,890)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-container" id="carouselWomen">
+                    <h2>Prendas para Mujeres</h2>
+                    <div class="carousel-images">
+                        <div class="product">
+                            <img src="camisa2m.jpg" alt="Prenda mujer 1">
+                            <div class="product-info">
+                                <p>Camisa Elegante, Color:Blanca,Marca:Nike</p>
+                                <p>Precio: $650.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Camisa Elegante', 650)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="camisa3m.jpg" alt="Prenda mujer 2">
+                            <div class="product-info">
+                                <p>Camisa Casual, Color:Negro,Marca:Ebay</p>
+                                <p>Precio: $320.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Camisa Casual',320 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="camisagrism.jpg" alt="Prenda mujer 3">
+                            <div class="product-info">
+                                <p>Camisa Deportiva,Color:Gris,Marca:Sky Fit</p>
+                                <p>Precio: $254.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Camisa Deportiva , Color Gris', 254)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="camisam.jpg" alt="Prenda mujer 4">
+                            <div class="product-info">
+                                <p>Camisa Deportiva , Color:Negro, Marca:Sky Fit</p>
+                                <p>Precio: $260.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Camisa Deportiva', 260)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="chalecom.jpg" alt="Prenda mujer 5">
+                            <div class="product-info">
+                                <p>Chaleco Elegante Deportivo, Color Negro, Marca:Pumas</p>
+                                <p>Precio: $450.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Chaleco Elegante',450 )">Agregar al carrito</button>
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-images">
+                        <div class="product">
+                            <img src="chaleem.jpg" alt="Prenda mujer 6">
+                            <div class="product-info">
+                                <p>Chaleco Deportivo, Color Negro, Marca:Locachy</p>
+                                <p>Precio: $240.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button class="add-to-cart">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="chalem.jpg" alt="Prenda mujer 7">
+                            <div class="product-info">
+                                <p>Chaleco Moderno Deportivo, Color Negro,Marca:Locachy</p>
+                                <p>Precio: $256.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Chaleco Moderno',256 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="faldam.jpg" alt="Prenda mujer 8">
+                            <div class="product-info">
+                                <p>Falda Estilo Casual Deportivo , Color Negro y Blanco, Marca:Adidas</p>
+                                <p>Precio: $950.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Falda Estilo Casual', 950)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="malla1m.jpg" alt="Prenda mujer 9">
+                            <div class="product-info">
+                                <p>Malla Deportiva, Marca:Semash</p>
+                                <p>Precio: $260.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Malla Deportiva',260 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="malla2m.jpg" alt="Prenda mujer 10">
+                            <div class="product-info">
+                                <p>Leggings ,Color Negro , Marca:Anarchy</p>
+                                <p>Precio: $450.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Leggins',450 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-images">
+                        <div class="product">
+                            <img src="shortm.jpg" alt="Prenda mujer 11">
+                            <div class="product-info">
+                                <p>Short Casual Deportivo, Color Negro, Marca:Adidas</p>
+                                <p>Precio: $670.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short Casula Deportivo', 670)">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="short2m.jpg" alt="Prenda mujer 12">
+                            <div class="product-info">
+                                <p>Short Deportivo, Color Negro, Marca:Nike</p>
+                                <p>Precio: $730.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short Deportivo',730 )">Agregar al carrito</button> 
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="suda2m.jpg" alt="Prenda mujer 13">
+                            <div class="product-info">
+                                <p>Sudadera Casual Deportiva, Color:Negro y Vino, Marca:Nike</p>
+                                <p>Precio: $340.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Short Casual Deportiva',340 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="sudaderam.jpg" alt="Prenda mujer 14">
+                            <div class="product-info">
+                                <p>Sudadera Deportiva, Color:Negra, Marca:Adidas</p>
+                                <p>Precio: $890.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Sudadera Deportiva',890 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="sueterm.jpg" alt="Prenda mujer 15">
+                            <div class="product-info">
+                                <p>Suéter Moderno, Color:Gris, Marca:Locachy</p>
+                                <p>Precio: $460.00</p>
+                                <label for="size">Selecciona tu talla:</label>
+    <select id="size" name="size">
+        <option value="S">S (Pequeña)</option>
+        <option value="M">M (Mediana)</option>
+        <option value="L">L (Grande)</option>
+        <option value="XL">XL (Extra Grande)</option>
+    </select>
+                                <button onclick="addToCart('Sueter Moderno',460 )">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const cart2 = {};
+            
+                    function addToCartWithSize(productName, productPrice) {
+                        // Obtener la talla seleccionada
+                        const size = document.getElementById('size') ? document.getElementById('size').value : document.getElementById('size2').value;
+            
+                        // Crear una clave única para el producto con la talla seleccionada
+                        const cartKey = `${productName} (Talla: ${size})`;
+            
+                        // Verificar si el producto ya está en el carrito y actualizar la cantidad
+                        if (cart2[cartKey]) {
+                            cart2[cartKey].quantity += 1;
+                        } else {
+                            cart2[cartKey] = {
+                                price: productPrice,
+                                quantity: 1
+                            };
+                        }
+            
+                        updateCart();
+                    }
+            
+                    function updateCart2() {
+                        const cartList = document.getElementById('cart-items');
+                        const cartTotal = document.getElementById('cart-total');
+                        cartList.innerHTML = '';
+                        let total = 0;
+            
+                        // Recorrer los productos en el carrito y mostrarlos
+                        for (const product in cart) {
+                            const { price, quantity } = cart[product];
+                            total += price * quantity;
+            
+                            const li = document.createElement('li');
+                            li.textContent = `${product} - Precio: $${price} x ${quantity} = $${price * quantity}`;
+                            cartList.appendChild(li);
+                        }
+            
+                        // Si no hay productos, mostrar un mensaje vacío
+                        if (Object.keys(cart).length === 0) {
+                            cartList.innerHTML = '<li>No hay productos en el carrito.</li>';
+                        }
+            
+                        // Actualizar el total del carrito
+                        cartTotal.textContent = total.toFixed(2);
+                    }
+                </script>
+            </body>
+
+
+                
+
+
+ <body>
+
+<div class="cart-container">
+    <h2>Carrito de Compras</h2>
+    <ul id="cart-items">
+        <li>No hay productos en el carrito.</li>
+    </ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+
+    <label for="coupon">Cupón de descuento:</label>
+    <input type="text" id="coupon" placeholder="Introduce tu cupón">
+
+    <label for="payment">Forma de pago:</label>
+    <select id="payment" onchange="updatePaymentDetails()">
+        <option value="">Selecciona una forma de pago</option>
+        <option value="paypal">PayPal</option>
+        <option value="transferencia">Transferencia</option>
+        <option value="credito">Tarjeta de Crédito</option>
+        <option value="debito">Tarjeta de Débito</option>
+    </select>
+
+    <div id="paymentDetails"></div>
+    <button id="checkoutButton">Proceder al Pago</button>
+</div>
+
+<script>
+    // Carrito de compras
+    const cart = {};
+
+    function addToCart(productName, productPrice) {
+        const cartList = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+
+        // Si el producto ya está en el carrito, aumentar la cantidad
+        if (cart[productName]) {
+            cart[productName].quantity += 1;
+        } else {
+            // Agregar un nuevo producto al carrito
+            cart[productName] = {
+                price: productPrice,
+                quantity: 1
+            };
+        }
+
+        // Actualizar el carrito visualmente
+        cartList.innerHTML = '';
+        let total = 0;
+
+        for (const product in cart) {
+            const { price, quantity } = cart[product];
+            total += price * quantity;
+
+            const li = document.createElement('li');
+            li.textContent = `${product} - Precio: $${price} x ${quantity} = $${price * quantity}`;
+            cartList.appendChild(li);
+        }
+
+        // Si no hay productos, mostrar un mensaje vacío
+        if (Object.keys(cart).length === 0) {
+            cartList.innerHTML = '<li>No hay productos en el carrito.</li>';
+        }
+
+        // Actualizar el total
+        cartTotal.textContent = total.toFixed(2);
+    }
+
+    // Actualizar detalles de pago dinámicamente
+    function updatePaymentDetails() {
+        const paymentMethod = document.getElementById('payment').value;
+        const paymentDetails = document.getElementById('paymentDetails');
+        paymentDetails.innerHTML = ''; // Limpiar detalles previos
+
+        if (paymentMethod === 'paypal') {
+            paymentDetails.innerHTML = '<p>Serás redirigido a PayPal para completar tu compra.</p>';
+        } else if (paymentMethod === 'transferencia') {
+            paymentDetails.innerHTML = '<p>Por favor, realiza una transferencia a la cuenta: 1234-5678-9012.</p>';
+        } else if (paymentMethod === 'credito' || paymentMethod === 'debito') {
+            paymentDetails.innerHTML = `
+                <label for="cardNumber">Número de Tarjeta:</label>
+                <input type="text" id="cardNumber" placeholder="Introduce tu número de tarjeta">
+
+                <label for="expirationDate">Fecha de Expiración:</label>
+                <input type="text" id="expirationDate" placeholder="MM/AA">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="Código de Seguridad">
+            `;
+        }
+    }
+</script>
+
+<link rel="stylesheet" href="StyleCarrito.css">
+
+
+</body
+</body>
+</html>

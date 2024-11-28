@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Marcas</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Menú de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #333;
+            display: flex;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li:hover > a {
+            background: #444;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #444;
+            padding: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            width: 200px;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        /* Encabezado */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0 30px;
+        }
+
+        /* Grid de marcas */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .brand-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .brand-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .brand-card h2 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .brand-card p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Catálogo
+                <ul>
+                    <li><a href="marca.html">Marca</a></li>
+                    <li><a href="modelo.html">Modelo</a></li>
+                    <li><a href="precio.html">Precio</a></li>
+                    <li><a href="area.html">Área</a></li>
+                </ul>
+            </li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="mapa.html">Mapa de Sitios</a></li>
+        </ul>
+    </nav>
+
+    <h1>Catálogo - Marcas</h1>
+    <p>Descubre las marcas líderes en ropa deportiva.</p>
+
+   <!-- Grid de marcas -->
+<div class="brand-grid">
+    <!-- Marca 1 -->
+    <div class="brand-card">
+        <img src="nike.jpg" alt="Nike">
+        <h2>Nike</h2>
+        <a href="https://www.nike.mx">Ir a la Página</a>
+        <p>Innovación y estilo en ropa deportiva.</p>
+    </div>
+
+    <!-- Marca 2 -->
+    <div class="brand-card">
+        <img src="adidas.png" alt="Adidas">
+        <h2>Adidas</h2>
+        <a href="https://www.adidas.mx">Ir a la Página</a>
+        <p>Ropa y accesorios para deportistas.</p>
+    </div>
+
+    <!-- Marca 3 -->
+    <div class="brand-card">
+        <img src="tempaky.png" alt="Tempaky">
+        <h2>Tempaky</h2>
+        <p>Marca de camisas casuales para hombres.</p>
+    </div>
+
+    <!-- Marca 4 -->
+    <div class="brand-card">
+        <img src="hawk.png" alt="Hawk Sports Mens">
+        <h2>Hawk Sports Mens</h2>
+        <p>Ropa deportiva masculina de alta calidad.</p>
+    </div>
+
+    <!-- Marca 5 -->
+    <div class="brand-card">
+        <img src="under.png" alt="Under Armour">
+        <h2>Under Armour</h2>
+        <p>Marca deportiva para atletas de alto rendimiento.</p>
+    </div>
+
+    <!-- Marca 6 -->
+    <div class="brand-card">
+        <img src="joma.jpg" alt="Joma Sports">
+        <h2>Joma Sports</h2>
+        <p>Equipamiento deportivo y ropa técnica.</p>
+    </div>
+
+    <!-- Marca 7 -->
+    <div class="brand-card">
+        <img src="cj.png" alt="Chy Joey">
+        <h2>Chy Joey</h2>
+        <p>Chalecos elegantes para ocasiones especiales.</p>
+    </div>
+
+    <!-- Marca 8 -->
+    <div class="brand-card">
+        <img src="alfini.png" alt="Alfini">
+        <h2>Alfini</h2>
+        <p>Ropa deportiva de alta calidad.</p>
+    </div>
+
+    <!-- Marca 9 -->
+    <div class="brand-card">
+        <img src="ultra.png" alt="Ultrahigh">
+        <h2>Ultrahigh</h2>
+        <p>Moda y estilo para deportes extremos.</p>
+    </div>
+
+    <!-- Marca 10 -->
+    <div class="brand-card">
+        <img src="many.png" alt="Manifity Sports">
+        <h2>Manifity Sports</h2>
+        <p>Ropa deportiva para atletas de todas las disciplinas.</p>
+    </div>
+
+
+  
+    <!-- Marca 14 -->
+    <div class="brand-card">
+        <img src="sky.png" alt="Sky Fit">
+        <h2>Sky Fit</h2>
+        <p>Ropa deportiva para mujeres activas.</p>
+    </div>
+
+    <!-- Marca 15 -->
+    <div class="brand-card">
+        <img src="puma.jpg" alt="Puma">
+        <h2>Pumas</h2>
+        <p>Chalecos deportivos con estilo y rendimiento.</p>
+    </div>
+
+    <!-- Marca 16 -->
+    <div class="brand-card">
+        <img src="locachy.png" alt="Locachy">
+        <h2>Locachy</h2>
+        <p>Moda deportiva para mujeres jóvenes.</p>
+    </div>
+
+    <!-- Marca 17 -->
+    <div class="brand-card">
+        <img src="semash.jpg" alt="Semash">
+        <h2>Semash</h2>
+        <p>Leggings y mallas deportivas para mujeres.</p>
+    </div>
+
+</div>

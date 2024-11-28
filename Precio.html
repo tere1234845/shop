@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Productos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+            gap: 20px;
+            padding: 20px;
+            width: 90%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-height: 200px; /* Imágenes más pequeñas */
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            color: #333;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+        }
+
+        .product-info .price {
+            font-weight: bold;
+            color: #FF5722;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="gallery-container">
+        <!-- Producto 15 -->
+        <div class="gallery-item">
+            <img src="conjunto2.jpg" alt="Conjunto Casual Deportivo">
+            <div class="product-info">
+                <p>Conjunto Casual Deportivo, Color: Negro, Marca: Abigprofit</p>
+                <p class="price">Precio: $1,890.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 16 -->
+        <div class="gallery-item">
+            <img src="camisa2m.jpg" alt="Camisa Elegante">
+            <div class="product-info">
+                <p>Camisa Elegante, Color: Blanca, Marca: Nike</p>
+                <p class="price">Precio: $650.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 17 -->
+        <div class="gallery-item">
+            <img src="camisa3m.jpg" alt="Camisa Casual">
+            <div class="product-info">
+                <p>Camisa Casual, Color: Negro, Marca: Ebay</p>
+                <p class="price">Precio: $320.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 18 -->
+        <div class="gallery-item">
+            <img src="camisagrism.jpg" alt="Camisa Deportiva">
+            <div class="product-info">
+                <p>Camisa Deportiva, Color: Gris, Marca: Sky Fit</p>
+                <p class="price">Precio: $254.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 19 -->
+        <div class="gallery-item">
+            <img src="camisam.jpg" alt="Camisa Deportiva">
+            <div class="product-info">
+                <p>Camisa Deportiva, Color: Negro, Marca: Sky Fit</p>
+                <p class="price">Precio: $260.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 20 -->
+        <div class="gallery-item">
+            <img src="chalecom.jpg" alt="Chaleco Elegante Deportivo">
+            <div class="product-info">
+                <p>Chaleco Elegante Deportivo, Color: Negro, Marca: Pumas</p>
+                <p class="price">Precio: $450.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 21 -->
+        <div class="gallery-item">
+            <img src="chaleem.jpg" alt="Chaleco Deportivo">
+            <div class="product-info">
+                <p>Chaleco Deportivo, Color: Negro, Marca: Locachy</p>
+                <p class="price">Precio: $240.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 22 -->
+        <div class="gallery-item">
+            <img src="chalem.jpg" alt="Chaleco Moderno Deportivo">
+            <div class="product-info">
+                <p>Chaleco Moderno Deportivo, Color: Negro, Marca: Locachy</p>
+                <p class="price">Precio: $256.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 23 -->
+        <div class="gallery-item">
+            <img src="faldam.jpg" alt="Falda Estilo Casual Deportivo">
+            <div class="product-info">
+                <p>Falda Estilo Casual Deportivo, Color: Negro y Blanco, Marca: Adidas</p>
+                <p class="price">Precio: $950.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 24 -->
+        <div class="gallery-item">
+            <img src="malla1m.jpg" alt="Malla Deportiva">
+            <div class="product-info">
+                <p>Malla Deportiva, Marca: Semash</p>
+                <p class="price">Precio: $260.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 25 -->
+        <div class="gallery-item">
+            <img src="malla2m.jpg" alt="Leggings">
+            <div class="product-info">
+                <p>Leggings, Color: Negro, Marca: Anarchy</p>
+                <p class="price">Precio: $450.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 26 -->
+        <div class="gallery-item">
+            <img src="shortm.jpg" alt="Short Casual Deportivo">
+            <div class="product-info">
+                <p>Short Casual Deportivo, Color: Negro, Marca: Adidas</p>
+                <p class="price">Precio: $670.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 27 -->
+        <div class="gallery-item">
+            <img src="short2m.jpg" alt="Short Deportivo">
+            <div class="product-info">
+                <p>Short Deportivo, Color: Negro, Marca: Nike</p>
+                <p class="price">Precio: $730.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 28 -->
+        <div class="gallery-item">
+            <img src="suda2m.jpg" alt="Sudadera Casual Deportiva">
+            <div class="product-info">
+                <p>Sudadera Casual Deportiva, Color: Negro y Vino, Marca: Nike</p>
+                <p class="price">Precio: $340.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 29 -->
+        <div class="gallery-item">
+            <img src="sudaderam.jpg" alt="Sudadera Deportiva">
+            <div class="product-info">
+                <p>Sudadera Deportiva, Color: Negra, Marca: Adidas</p>
+                <p class="price">Precio: $890.00</p>
+            </div>
+        </div>
+
+        <!-- Producto 30 -->
+        <div class="gallery-item">
+            <img src="sueterm.jpg" alt="Suéter Moderno">
+            <div class="product-info">
+                <p>Suéter Moderno, Color: Gris, Marca: Locachy</p>
+                <p class="price">Precio: $460.00</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+Usuario:Teletubi
+Contraseña:12345
+
+NOTA:LA PÁGINA PRINCIPAL SE LLAMA (index.html) FAVOR DE BUSCAR.

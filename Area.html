@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Área</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Menú de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #333;
+            display: flex;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li:hover > a {
+            background: #444;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #444;
+            padding: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            width: 200px;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        /* Encabezado */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0 30px;
+        }
+
+        /* Sección de áreas */
+        .area-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .area-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .area-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .area-card h2 {
+            margin: 15px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .area-card p {
+            margin: 0 15px 15px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Catálogo
+                <ul>
+                    <li><a href="marca.html">Marca</a></li>
+                    <li><a href="modelo.html">Modelo</a></li>
+                    <li><a href="precio.html">Precio</a></li>
+                    <li><a href="area.html">Área</a></li>
+                </ul>
+            </li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="mapa.html">Mapa de Sitios</a></li>
+        </ul>
+    </nav>
+
+    <h1>Catálogo - Área</h1>
+    <p>Selecciona prendas según la categoría o área que prefieras.</p>
+
+    <!-- Grid de áreas -->
+    <div class="area-section">
+        <!-- Área 1 -->
+        <div class="area-card">
+            <img src="images/casual.jpg" alt="Ropa Casual">
+            <h2>Ropa Casual</h2>
+            <p>Perfecta para tu día a día con estilo y comodidad.</p>
+        </div>
+
+        <!-- Área 2 -->
+        <div class="area-card">
+            <img src="images/deportiva.jpg" alt="Ropa Deportiva">
+            <h2>Ropa Deportiva</h2>
+            <p>Confeccionada para tus entrenamientos y actividades físicas.</p>
+        </div>
+
+        <!-- Área 3 -->
+        <div class="area-card">
+            <img src="images/formal.jpg" alt="Ropa Formal">
+            <h2>Ropa Formal</h2>
+            <p>Para eventos especiales y reuniones importantes.</p>
+        </div>
+
+        <!-- Agregar más áreas según sea necesario -->
+    </div>
+
+</body>
+</html>

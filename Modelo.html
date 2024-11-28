@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Modelos</title>
+    <style>
+        /* General */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Menú */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #333;
+            overflow: hidden;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li:hover > a {
+            background: #444;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #444;
+            padding: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            width: 200px;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        /* Encabezados */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0 30px;
+        }
+
+        /* Tarjetas de modelo */
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .model-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .model-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .model-card h2 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .model-card p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Catálogo
+                <ul>
+                    <li><a href="marca.html">Marca</a></li>
+                    <li><a href="modelo.html">Modelo</a></li>
+                    <li><a href="precio.html">Precio</a></li>
+                    <li><a href="area.html">Área</a></li>
+                </ul>
+            </li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="mapa.html">Mapa de Sitios</a></li>
+        </ul>
+    </nav>
+
+    <h1>Catálogo - Modelos</h1>
+    <p>Explora nuestros modelos más populares de ropa deportiva.</p>
+
+    <!-- Grid de modelos -->
+    <div class="model-grid">
+        <!-- Ejemplo de modelo -->
+        <div class="model-card">
+            <img src="images/modelo1.jpg" alt="Modelo 1">
+            <h2>Running Pro</h2>
+            <p>Ropa diseñada para máxima comodidad al correr.</p>
+            <p><strong>$</strong></p>
+        </div>
+
+        <div class="model-card">
+            <img src="images/modelo2.jpg" alt="Modelo 2">
+            <h2>Gym Flex</h2>
+            <p>Prendas ligeras y flexibles para entrenamientos intensos.</p>
+            <p><strong>$</strong></p>
+        </div>
+
+        <div class="model-card">
+            <img src="images/modelo3.jpg" alt="Modelo 3">
+            <h2>Yoga Balance</h2>
+            <p>Ropa suave y elástica para sesiones de yoga.</p>
+            <p><strong>$.</strong></p>
+        </div>
+
+        <!-- Agregar más modelos según sea necesario -->
+    </div>
+
+</body>
+</html>
