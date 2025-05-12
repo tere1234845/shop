@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: #f8f8f8;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #7f5af0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  .carrito {
+    background: #7f5af0;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+  }
+  
+  .carrito:hover {
+    background: #6246ea;
+  }
+  
+  @keyframes glow {
+    0% { text-shadow: 0 0 10px #7f5af0, 0 0 20px #7f5af0, 0 0 30px #7f5af0; }
+    100% { text-shadow: 0 0 20px #6246ea, 0 0 40px #6246ea, 0 0 60px #6246ea; }
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url('futuristic-bg.jpg') center/cover no-repeat;
+  }
+  
+  .hero img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(127, 90, 240, 0.8);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .hero img:hover {
+    transform: scale(1.03);
+  }
+  
+  .hero p {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  
+  .carousel, .pc-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .carousel img, .pc-carousel img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.6);
+    transition: transform 0.3s;
+  }
+  
+  .carousel img:hover, .pc-carousel img:hover {
+    transform: scale(1.05);
+  }
+  
+  .form-section, .guide-section {
+    background: #111827;
+    color: #d1d5db;
+    border-radius: 20px;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(127, 90, 240, 0.4);
+  }
+  
+  .form-section h2, .guide-section h3 {
+    color: #7f5af0;
+    text-transform: uppercase;
+  }
+  
+  .form-section input, .form-section button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  
+  .form-section input {
+    background: #1f2937;
+    color: #f8f8f8;
+  }
+  
+  .form-section button {
+    background: #7f5af0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .form-section button:hover {
+    background: #6246ea;
+  }
+  
+  .app-info {
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  
+  .app-info a {
+    background: #7f5af0;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .app-info a:hover {
+    background: #6246ea;
+  }
+  
+  .footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  
+  .footer a {
+    margin: 0 0.5rem;
+    color: #7f5af0;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  

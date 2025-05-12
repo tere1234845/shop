@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<head>
+  <div class="hero-background"></div>
+
+  <!-- Para el modal -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- En tu HTML, añade estos scripts en el <head> -->
+    <div id="paypal-button-container" style="margin-top: 1rem; display: none;"></div>
+ <script type="main.js" src="teechcraft3d@gmail.com"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Craft 3D</title>
+  <!-- Enlace al archivo de estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cart-mascot-container">
+    <img src="niños.png" alt="Niño ayudante" class="cart-mascot" />
+  </div>
+<!-- Encabezado con el nombre de la página y el ícono del carrito -->
+<header>
+  <h1 class="main-title">TECH CRAFT 3D</h1>
+
+  <div class="cart-container" id="cart-icon">
+    <i class="cart-icon fas fa-shopping-cart"></i>
+    <span class="cart-count" id="cart-count">0</span>
+  </div>
+ 
+  
+
+<!-- Modal del carrito de compras -->
+<div id="cart-modal" class="cart-modal hidden">
+  <div class="cart-content">
+    <h2>Tu carrito</h2>
+    <!-- Aquí se mostrarán los productos añadidos al carrito -->
+    <div id="cart-items"></div>
+    <p id="cart-total">Total: $0</p>
+
+    <!-- Selección del método de pago dentro del modal -->
+    <label for="modal-payment-method">Selecciona un método de pago:</label>
+    <select id="modal-payment-method">
+      <option value="Paypal">Paypal</option>
+      <option value="Stripe">Stripe</option>
+      <option value="Mercado Pago">Mercado Pago</option>
+      <option value="OpenPay">OpenPay</option>
+      
+    </select>
+
+    <div class="cart-buttons">
+      <button onclick="checkout()">Pagar</button>
+      <button onclick="closeCart()">Cerrar</button>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+  <!-- Sección del logo y descripción -->
+  
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <video autoplay muted loop class="video-bg">
+        <source src="logo.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+  </section>
+  
+  
+  
+  <!-- Carrusel de imágenes con botones y puntitos -->
+<section class="layout-dos-columnas">
+  <section class="carousel-container">
+    <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+    <div class="carousel-track" id="carouselTrack">
+      <img src="desc1.png" alt="Imagen 1" class="carousel-image" />
+      <img src="desc2.png" alt="Imagen 2" class="carousel-image" />
+      <img src="desc3.png" alt="Imagen 3" class="carousel-image" />
+      <img src="desc4.png" alt="Imagen 4" class="carousel-image" />
+    </div>
+    <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+</section>
+<script>
+  const track = document.getElementById("carouselTrack");
+  const images = document.querySelectorAll(".carousel-image");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const dotsContainer = document.getElementById("carouselDots");
+
+  let index = 0;
+
+  // Crear los puntitos
+  images.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("carousel-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      index = i;
+      updateCarousel();
+      resetAutoSlide();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".carousel-dot");
+
+  function updateCarousel() {
+    const width = images[0].clientWidth;
+    track.style.transform = `translateX(-${index * width}px)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAutoSlide();
+  });
+
+  window.addEventListener("resize", updateCarousel);
+
+  // Auto-slide cada 4 segundos
+  let autoSlide = setInterval(nextSlide, 4000);
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextSlide, 4000);
+  }
+</script>
+
+
+  <!-- Botones informativos interactivos -->
+  <section class="info">
+    <button onclick="openGuide()">¿Cómo se usa la APP?</button>
+    <button onclick="window.open('https://1drv.ms/f/c/19cee6b3d04c2bce/Es4rTNCz5s4ggBmjBQAAAAABYXwWBiB9pUAUj5eLWC3DDQ?e=Q1raMm')">Descargar la APP</button>
+  </section>
+
+  <!-- Guía de uso -->
+<div id="guide-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeGuide()">&times;</span>
+    <h2>Guía de uso de TechCraft 3D</h2>
+    <div class="guide-carousel-container">
+     
+      <div id="guide-carousel" class="guide-carousel">
+        <img src="manual.jpg" alt="Paso 1" class="zoomable">
+        <img src="manual2.jpg" alt="Paso 2" class="zoomable">
+        <img src="manual3.jpg" alt="Paso 3" class="zoomable"">
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  <!-- Sección de productos con botón para agregar al carrito -->
+  <section class="products">
+    <div class="product">
+      <img src="pc1.jpg" alt="PC Gamer" />
+      <h3>PC Gamer Pro</h3>
+      <p>$30,999.00</p>
+     <p> SKU:CM-80023</p>
+     <p>NVIA GeForce RTX 4070 Super 12GB GDDR6X</p>
+     <p>AMD Ryzen 9 5900X</p>
+     <p>32GB 3200MHz</p>
+    <p> SSD 960GB|HDD 4TB</p>
+      <button onclick="addToCart('PC Gamer Pro', 30999)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc2.jpg" alt="PC Gamer" />
+      <h3>PC Gamer Pro</h3>
+      <p>$35,899.00</p>
+      <p>SKU:CM-05475</p>
+      <p>NVIA GeForce RTX 4070 Super 12GB GDDR6X.</p>
+      <p>AMD Ryzen 9 7900X</p>
+      <p>32GB DDR5 5600MHz</p>
+      <p>SSD 1TB</p>
+      <button onclick="addToCart('PC Gamer Pro', 35999)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc3.jpg" alt="PC Gamer" />
+      <h3>PC Gamer Pro</h3>
+      <p>$36,999.00</p>
+      <p>SKU:CM-01003</p>
+      <p>NVIDIA GeForce RTX 4070 Super 12GB GDDR6X</p>
+      <p>Intel Core i9 14900F</p>
+      <p>32GB DDR5 5600MHz</p>
+      <p>SSD 1TB</p>
+      <button onclick="addToCart('PC Gamer Pro', 36999)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc4.jpg" alt="PC Gamer" />
+      <h3>PC Gamer Media</h3>
+      <p>$25,999.00</p>
+      <p>SKU:CM-01011</p>
+      <p>NVIDIA GeForce RTX 4060 Ti 8GB GDDR6</p>
+      <p>AMD Ryzen 7 8700F</p>
+      <p>32GB DDR5 5200MHz</p>
+      <p>SSD 1TB</p>
+      <button onclick="addToCart('PC Gamer Media', 25999)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc5.jpg" alt="PC Gamer" />
+      <h3>PC Gamer Media</h3>
+      <p>$24,999.00</p>
+      <p>SKU:CM-71728</p>
+      <p>NVIDIA GeForce RTX 4060 Ti 8GB GDDR6</p>
+      <p>Intel Core i7 12700F</p>
+      <p>32 GB 3200MHz</p>
+      <p>SSD 1TB</p>
+      <button onclick="addToCart('PC Gamer Media', 24999)">Añadir al carrito</button>
+    </div>
+  </section>
+  <section class="products">
+    <div class="product">
+      <img src="pc6.jpg" alt="PC Gamer" />
+      <h3>PC Gamer Media</h3>
+      <p>$19,899.00</p>
+      <p>SKU:CM-80066</p>
+      <p>NVIDIA GeForce RTX 4060 8GB GDDR6</p>
+      <p>AMD Ryzen 7 5700</p>
+      <p>32GB 3200MHz</p>
+      <p>SSD 1TB</p>
+      <button onclick="addToCart('PC Gamer Media', 19899)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc7.jpg" alt="PC Gamer" />
+      <h3>PC Gamer </h3>
+      <p>$15,399.00</p>
+      <p>SKU:CM-05489</p>
+      <p>AMD Radeon Graphics</p>
+      <p>AMD Ryzen 9 7900</p>
+      <p>32GB DDR5 5200MHz</p>
+      <p>SSD 1TB</p>
+      <button onclick="addToCart('PC Gamer', 15399)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc8.jpg" alt="PC Gamer" />
+      <h3>PC Gamer</h3>
+      <p>$10,899.00</p>
+      <p>SKU:CM-05423</p>
+      <p>AMD Radeon RX 6500 XT 4GB GDDR6</p>
+      <p>AMD Ryzen 5 5500</p>
+      <p>16GB 3200MHz</p>
+      <p>SSD 1TB</p>
+      <button onclick="addToCart('PC Gamer', 10899)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc9.jpg" alt="PC Gamer" />
+      <h3>PC Gamer</h3>
+      <p>$10,899.00</p>
+      <p>SKU:CM-05422</p>
+      <p>AMD Radeon RX 6500 XT</p>
+      <p>AMD Ryzen 5 5500</p>
+      <p>16GB 3200MHz</p>
+      <p>SSD 250GB/HDD 2TB</p>
+      <button onclick="addToCart('PC Gamer', 10899)">Añadir al carrito</button>
+    </div>
+    <div class="product">
+      <img src="pc10.jpg" alt="PC Gamer" />
+      <h3>PC Gamer</h3>
+      <p>$7,799.00</p>
+      <p>SKU:CM-05385</p>
+      <p>AMD Radeon Graphics</p>
+      <p>AMD Ryzen 7 5700G</p>
+      <p>16GB 3200MHz</p>
+      <p>SSD 240GB|HDD 2TB</p>
+      <button onclick="addToCart('PC Gamer', 7799)">Añadir al carrito</button>
+    </div>
+  </section>
+
+  
+
+ 
+ 
+
+<!-- Sección del formulario de PC personalizada -->
+<section class="formulario">
+  <h2>Solicita tu PC Personalizada</h2>
+  <form id="formularioPC" onsubmit="sendRequest(event)">
+    <input type="text" name="nombre" placeholder="Nombre completo" required />
+    <input type="email" name="email" placeholder="Correo electrónico" required />
+    <textarea name="pc_deseada" placeholder="Describe la PC que necesitas" required></textarea>
+    <button type="submit">Enviar solicitud</button>
+  </form>
+</section>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+  // Inicializar EmailJS con tu User ID
+  emailjs.init("zyAcCbqPMzg5riiPd"); // <-- Tu User ID
+
+  function sendRequest(event) {
+    event.preventDefault(); // Prevenir el envío normal del formulario
+
+    emailjs.sendForm("TechCraft_3D", "template_vwbcjxu", document.getElementById("formularioPC"))
+      .then(function () {
+        alert("✅ Tu solicitud fue enviada correctamente. Revisa tu correo para confirmar.");
+        document.getElementById("formularioPC").reset();
+      }, function (error) {
+        alert("❌ Hubo un error al enviar. Por favor intenta más tarde.");
+        console.error("EmailJS error:", error);
+      });
+  }
+</script>
+
+<!-- Agrega en el <head> si no lo tienes ya -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- FOOTER ESTILO NEÓN -->
+<footer style="background-color: #0a0a0a; color: #fff; padding: 20px; text-align: center; font-family: 'Orbitron', sans-serif;">
+  <div style="margin-bottom: 15px;">
+    <a href="#politica-privacidad" style="color: #b266ff; margin: 0 12px; text-shadow: 0 0 6px #b266ff;"><i class="fas fa-user-shield"></i> Privacidad</a>
+    <a href="#politica-envio" style="color: #66ccff; margin: 0 12px; text-shadow: 0 0 6px #66ccff;"><i class="fas fa-truck"></i> Envíos</a>
+    <a href="#politica-garantia" style="color: #ff66b2; margin: 0 12px; text-shadow: 0 0 6px #ff66b2;"><i class="fas fa-shield-alt"></i> Garantía</a>
+    <a href="#preguntas-frecuentes" style="color: #ffcc66; margin: 0 12px; text-shadow: 0 0 6px #ffcc66;"><i class="fas fa-question-circle"></i> FAQ</a>
+  </div>
+  <p style="color: #888; font-size: 0.9em;">&copy; 2025 TechCraft 3D. Todos los derechos reservados.</p>
+</footer>
+
+<!-- POLÍTICAS ESTILO NEÓN -->
+<section id="politica-privacidad" style="background-color: #0d001a; color: #e0ccff; padding: 40px;">
+  <h2 style="color: #b266ff; text-shadow: 0 0 10px #b266ff;"><i class="fas fa-user-shield"></i> Política de Privacidad</h2>
+  <p>TechCraft 3D respeta tu privacidad. La información personal se usa solo para ofrecer el servicio. No compartimos tus datos con terceros. Contáctanos: <a href="mailto:teechcraft3d@gmail.com" style="color: #66ccff;">teechcraft3d@gmail.com</a></p>
+</section>
+
+<section id="politica-envio" style="background-color: #000d1a; color: #cceeff; padding: 40px;">
+  <h2 style="color: #66ccff; text-shadow: 0 0 10px #66ccff;"><i class="fas fa-truck"></i> Política de Envíos</h2>
+  <p>Procesamos envíos en 3-5 días hábiles. No nos responsabilizamos por retrasos externos. Enviaremos número de guía al procesarse el pedido.</p>
+</section>
+
+<section id="politica-garantia" style="background-color: #1a001a; color: #ffd6ec; padding: 40px;">
+  <h2 style="color: #ff66b2; text-shadow: 0 0 10px #ff66b2;"><i class="fas fa-shield-alt"></i> Política de Garantía</h2>
+  <p>Garantía de 30 días por defectos de fábrica. Para aplicar, escribe a <a href="mailto:teechcraft3d@gmail.com" style="color: #ff99cc;">teechcraft3d@gmail.com</a>. No cubre mal uso.</p>
+</section>
+
+<section id="preguntas-frecuentes" style="background-color: #1a0a00; color: #fff5e6; padding: 40px;">
+  <h2 style="color: #ffcc66; text-shadow: 0 0 10px #ffcc66;"><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+  <ul style="list-style: none; padding-left: 0;">
+    <li><strong>¿Cómo compro?</strong> Agrega productos al carrito y elige tu método de pago.</li>
+    <li><strong>¿Métodos de pago?</strong> Aceptamos PayPal, tarjetas, Mercado Pago y OpenPay.</li>
+    <li><strong>¿Puedo pedir algo personalizado?</strong> Sí, usa el formulario en la página.</li>
+    <li><strong>¿Tiempo de entrega?</strong> De 3 a 7 días hábiles.</li>
+  </ul>
+</section>
+
+ 
+
+  <!-- Modal del carrito de compras -->
+  <div id="cart-modal" class="cart-modal hidden">
+    <div class="cart-content">
+      <h2>Tu carrito</h2>
+      <div id="cart-items"></div>
+      <p id="cart-total">Total: $0</p>
+      <div class="cart-buttons">
+        <button onclick="checkout()">Pagar</button>
+        <button onclick="closeCart()">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="main.js" defer></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
+<div class="zoom-overlay" id="zoomOverlay">
+  <img id="zoomImg" src="" alt="Zoom" />
+</div>
+
+<script>
+  const overlay = document.getElementById("zoomOverlay");
+  const zoomImg = document.getElementById("zoomImg");
+  const zoomables = document.querySelectorAll(".zoomable");
+
+  zoomables.forEach(img => {
+    img.addEventListener("click", () => {
+      zoomImg.src = img.src;
+      overlay.style.display = "flex";
+    });
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    zoomImg.src = "";
+  });
+</script>

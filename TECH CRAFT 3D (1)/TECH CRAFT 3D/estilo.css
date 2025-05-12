@@ -1,0 +1,20 @@
+/* Agrega estas reglas CSS para hacer las letras dinámicas */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #7f5af0;
+    text-shadow: 0 0 20px rgba(127, 90, 240, 0.6);
+    animation: bounce 2s infinite ease-in-out;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+  }
